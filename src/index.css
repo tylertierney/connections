@@ -1,0 +1,23 @@
+body {
+  --color: #343434;
+  --background-color: #fffff7;
+
+  --tile-background-color: #efefe6;
+  --tile-selected-background-color: #353535;
+  --tile-selected-text-color: white;
+
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--color);
+  font-family: "text", Helvetica, system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+body.dark-theme {
+  --color: white;
+  --background-color: #494757;
+
+  --tile-background-color: #282835;
+  --tile-selected-background-color: #e3e3e3;
+  --tile-selected-text-color: rgb(19, 19, 19);
+}
