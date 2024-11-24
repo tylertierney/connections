@@ -7,26 +7,28 @@ export default function PuzzlesPage() {
   const connections = c as Game[];
 
   return (
-    <>
+    <div className={styles.page}>
       <table className={styles.table}>
         <thead className={styles.thead}>
           <tr className={styles.tr}>
             <th className={styles.th} scope="col">
               ID
             </th>
-            <th scope="col">Date</th>
+            <th className={styles.th} scope="col">
+              Date
+            </th>
           </tr>
         </thead>
         <tbody>
-          {connections.map((game, i) => {
+          {connections.toReversed().map((game, i) => {
             return (
               <tr key={i}>
-                <th scope="row">
+                <th className={styles.td} scope="row">
                   <Link style={{ color: "var(--color)" }} to={`${game.id}`}>
                     Game #{game.id}{" "}
                   </Link>
                 </th>
-                <td>
+                <td className={styles.td}>
                   {new Date(game.date).toLocaleDateString("en-us", {
                     year: "numeric",
                     month: "short",
@@ -47,6 +49,6 @@ export default function PuzzlesPage() {
           );
         })}
       </ul> */}
-    </>
+    </div>
   );
 }

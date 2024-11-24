@@ -1,0 +1,14 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  .table {
+    font-family: monospace;
+
+    .th,
+    .td {
+      text-align: start;
+    }
+  }
+}

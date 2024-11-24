@@ -12,7 +12,7 @@ import {
   useGameDispatch,
 } from "./GameContext";
 import ActionButton from "../../../components/ActionButton/ActionButton";
-import { Bounce, toast, ToastContainer, ToastTransition } from "react-toastify";
+import { Bounce, toast } from "react-toastify";
 import { hasThreeCorrectWords } from "../../../utils";
 
 export default function GamePage() {
@@ -45,15 +45,15 @@ export default function GamePage() {
           <div className={styles.gameLinks}>
             {previousGame && (
               <Link
-                className="hoverable-link"
+                className={`hoverable-link ${styles.gameLink}`}
                 to={`/puzzles/${String(previousGame.id)}`}
               >
-                &larr; Previous Game
+                <span>&larr;</span> Previous Game
               </Link>
             )}
             {nextGame && (
               <Link
-                className="hoverable-link"
+                className={`hoverable-link ${styles.gameLink}`}
                 to={`/puzzles/${String(nextGame.id)}`}
               >
                 Next Game &rarr;

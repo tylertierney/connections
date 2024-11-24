@@ -19,6 +19,12 @@
       .gameLinks {
         display: flex;
         gap: 1rem;
+
+        .gameLink {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
       }
     }
   }
@@ -30,7 +36,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: black;
+    color: #000000cf;
     gap: 0.25rem;
     margin-bottom: 12px;
     border-radius: 0.5rem;
@@ -96,6 +102,14 @@
 
 @media only screen and (max-width: 800px) {
   .page {
+    .header {
+      .titleAndLinks {
+        .h1 {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
     .correctAnswer {
       font-size: 1rem;
     }

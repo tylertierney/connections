@@ -114,7 +114,6 @@ const gameReducer: Reducer<GameState, GameAction> = (
     }
 
     case GameActionType.SUBMIT: {
-      console.log("submit called");
       const { selectedWords, game } = gameState;
       if (gameState.selectedWords.length !== 4) {
         return gameState;
@@ -128,6 +127,7 @@ const gameReducer: Reducer<GameState, GameAction> = (
           }
         }
         if (count === 4) {
+          console.log("got four right answers");
           const newCorrectAnswers = [...gameState.correctAnswers, answer];
           return {
             ...gameState,
@@ -138,8 +138,6 @@ const gameReducer: Reducer<GameState, GameAction> = (
               return !foundWords.includes(word);
             }),
           };
-        } else {
-          break;
         }
       }
 
