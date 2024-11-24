@@ -21,3 +21,50 @@ body.dark-theme {
   --tile-selected-background-color: #e3e3e3;
   --tile-selected-text-color: rgb(19, 19, 19);
 }
+
+a.hoverable-link {
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    opacity: 0.7;
+    translate: 0 -2px;
+  }
+}
+
+button.action-button {
+  border-color: #92d890;
+  background-color: #81c57f;
+  border-radius: 16px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.1s ease-in-out;
+
+  .front {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    background-color: #a7ffa4;
+    border-color: #a3e9a1;
+    border-width: 4px;
+    border-style: solid;
+    translate: -3px -3px;
+    border-radius: 16px;
+    width: inherit;
+    flex-grow: 1;
+  }
+
+  &:active {
+    .front {
+      translate: 0;
+    }
+  }
+}

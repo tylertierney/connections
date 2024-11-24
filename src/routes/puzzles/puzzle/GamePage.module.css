@@ -1,0 +1,131 @@
+.page {
+  padding: 1rem;
+  font-family: monospace;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    .titleAndLinks {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .h1 {
+        margin: 0;
+      }
+
+      .gameLinks {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+  }
+
+  .correctAnswer {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    gap: 0.25rem;
+    margin-bottom: 12px;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+
+    &.level0 {
+      background-color: #f9df6d;
+    }
+    &.level1 {
+      background-color: #a0c35a;
+    }
+    &.level2 {
+      background-color: #b0c4ef;
+    }
+    &.level3 {
+      background-color: #ba81c5;
+    }
+
+    .group {
+      font-weight: bold;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(
+        0,
+        1fr
+      );
+    gap: 12px;
+    margin-bottom: 1.5rem;
+
+    .tile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      background-color: gray;
+      padding: 2rem 0;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      background-color: var(--tile-background-color);
+      cursor: pointer;
+      font-family: sans-serif;
+      user-select: none;
+      overflow-wrap: anywhere;
+
+      &.selected {
+        background-color: var(--tile-selected-background-color);
+        color: var(--tile-selected-text-color);
+      }
+    }
+  }
+
+  .submitBtn {
+    background: red;
+  }
+
+  .mistakes {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .page {
+    .correctAnswer {
+      font-size: 1rem;
+    }
+    .grid {
+      gap: 6px;
+
+      .tile {
+        font-size: 0.7rem;
+      }
+    }
+
+    .buttonWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: stretch;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .page {
+    .correctAnswer {
+      font-size: 1rem;
+    }
+    .grid {
+      gap: 14px;
+
+      .tile {
+        padding: 2.2rem 0;
+      }
+    }
+  }
+}

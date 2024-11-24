@@ -1,0 +1,32 @@
+.actionBtns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .shuffleAndClearBtns {
+    display: flex;
+    justify-items: stretch;
+    gap: 0.5rem;
+
+    button {
+      flex-grow: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .action-button.submitBtn {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .actionBtns {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .submitBtn {
+      width: 50%;
+    }
+  }
+}

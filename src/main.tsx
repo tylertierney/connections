@@ -2,10 +2,11 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App, { Game } from "./routes/App.tsx";
-import { createBrowserRouter, Params, RouterProvider } from "react-router-dom";
-import GamePage from "./routes/games/GamePage.tsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import GamePage from "./routes/puzzles/puzzle/GamePage.tsx";
 import connections from "./connections.json";
-import { GameContext, GameProvider } from "./routes/games/GameContext.tsx";
+import { GameProvider } from "./routes/puzzles/puzzle/GameContext.tsx";
+import PuzzlesPage from "./routes/puzzles/PuzzlesPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -13,9 +14,13 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <span>oh noooo</span>,
     children: [
+      { index: true, element: <PuzzlesPage /> },
       {
-        path: "games/:gameId",
-        // element: <GamePage />,
+        path: "puzzles",
+        element: <PuzzlesPage />,
+      },
+      {
+        path: "puzzles/:gameId",
         element: (
           <GameProvider>
             <GamePage />
@@ -24,7 +29,7 @@ const router = createBrowserRouter([
         loader: ({ params }) => {
           const games = connections as Game[];
           const asNumber = parseInt(params.gameId ?? "0", 10);
-          return games[asNumber];
+          return games.find(({ id }) => id === asNumber) ?? null;
         },
       },
     ],
