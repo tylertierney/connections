@@ -36,6 +36,17 @@ export default function GamePage() {
   const nextGame = connections.find(({ id }) => id === game.id + 1);
   const previousGame = connections.find(({ id }) => id === game.id - 1);
 
+  const getFontSize = (words: string[]): string => {
+    if (words.some((w) => w.length > 15)) {
+      return "80%";
+    }
+    if (words.some((w) => w.length > 10)) {
+      return "88%";
+    }
+
+    return "inherit";
+  };
+
   return (
     <div className={styles.page}>
       <header className={styles.header}>
@@ -80,7 +91,15 @@ export default function GamePage() {
             }`}
             onClick={() => dispatch({ type: GameActionType.SELECT_WORD, word })}
           >
-            {word}
+            {word.split(" ").map((w, i, arr) => (
+              <span
+                key={i}
+                className={styles.label}
+                style={{ fontSize: getFontSize(arr) }}
+              >
+                {w}
+              </span>
+            ))}
           </div>
         ))}
       </div>

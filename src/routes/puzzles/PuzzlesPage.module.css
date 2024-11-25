@@ -1,14 +1,16 @@
 .page {
-  display: flex;
-  flex-direction: column;
   padding: 1rem;
 
   .table {
+    display: table;
     font-family: monospace;
+    color: var(--color);
 
     .th,
     .td {
       text-align: start;
+      width: 110px;
+      height: 1.2rem;
     }
   }
 }

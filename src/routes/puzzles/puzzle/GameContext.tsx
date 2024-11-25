@@ -79,7 +79,6 @@ const gameReducer: Reducer<GameState, GameAction> = (
 ): GameState => {
   switch (action.type) {
     case GameActionType.INIT: {
-      console.log("INIT called");
       const foundGame: string | null = localStorage.getItem(
         `state-${action.game.id}`
       );
