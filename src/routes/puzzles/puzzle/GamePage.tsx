@@ -131,6 +131,13 @@ export default function GamePage() {
       <p className={styles.mistakes}>
         {mistakes} Mistake{`${mistakes === 1 ? "" : "s"}`}
       </p>
+
+      <ActionButton
+        onClick={() => dispatch({ type: GameActionType.RESET })}
+        variant="ghost"
+      >
+        Reset?
+      </ActionButton>
     </div>
   );
 }

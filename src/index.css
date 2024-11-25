@@ -67,4 +67,14 @@ button.action-button {
       translate: 0;
     }
   }
+
+  &.ghost {
+    color: var(--color);
+
+    border-color: #92d890;
+
+    .front {
+      background-color: var(--background-color);
+    }
+  }
 }

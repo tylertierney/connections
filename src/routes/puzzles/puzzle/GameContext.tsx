@@ -39,6 +39,7 @@ export enum GameActionType {
   INIT = "initGame",
   SHUFFLE = "shuffle",
   CLEAR = "clear",
+  RESET = "reset",
 }
 
 export type GameAction =
@@ -46,7 +47,8 @@ export type GameAction =
   | { type: GameActionType.SUBMIT }
   | { type: GameActionType.INIT; game: Game }
   | { type: GameActionType.SHUFFLE }
-  | { type: GameActionType.CLEAR };
+  | { type: GameActionType.CLEAR }
+  | { type: GameActionType.RESET };
 
 type GameReducer = Reducer<GameState, GameAction>;
 
@@ -78,6 +80,16 @@ const gameReducer: Reducer<GameState, GameAction> = (
 ): GameState => {
   switch (action.type) {
     case GameActionType.INIT: {
+      console.log("INIT called");
+      const foundGame: string | null = localStorage.getItem(
+        `state-${action.game.id}`
+      );
+
+      if (foundGame) {
+        const parsed = JSON.parse(foundGame) as GameState;
+        return parsed;
+      }
+
       return {
         game: action.game,
         correctAnswers: [],
@@ -99,18 +111,37 @@ const gameReducer: Reducer<GameState, GameAction> = (
         };
       }
 
-      return { ...gameState, selectedWords: [...selectedWords, word] };
+      const newState: GameState = {
+        ...gameState,
+        selectedWords: [...selectedWords, word],
+      };
+      localStorage.setItem(
+        `state-${gameState.game.id}`,
+        JSON.stringify(newState)
+      );
+      return newState;
     }
 
     case GameActionType.SHUFFLE: {
-      return {
+      const newState = {
         ...gameState,
         remainingWords: shuffleArray(gameState.remainingWords),
       };
+
+      localStorage.setItem(
+        `state-${gameState.game.id}`,
+        JSON.stringify(newState)
+      );
+      return newState;
     }
 
     case GameActionType.CLEAR: {
-      return { ...gameState, selectedWords: [] };
+      const newState: GameState = { ...gameState, selectedWords: [] };
+      localStorage.setItem(
+        `state-${gameState.game.id}`,
+        JSON.stringify(newState)
+      );
+      return newState;
     }
 
     case GameActionType.SUBMIT: {
@@ -127,9 +158,9 @@ const gameReducer: Reducer<GameState, GameAction> = (
           }
         }
         if (count === 4) {
-          console.log("got four right answers");
           const newCorrectAnswers = [...gameState.correctAnswers, answer];
-          return {
+
+          const newState = {
             ...gameState,
             selectedWords: [],
             correctAnswers: [...gameState.correctAnswers, answer],
@@ -138,10 +169,40 @@ const gameReducer: Reducer<GameState, GameAction> = (
               return !foundWords.includes(word);
             }),
           };
+          localStorage.setItem(
+            `state-${gameState.game.id}`,
+            JSON.stringify(newState)
+          );
+          return newState;
         }
       }
 
-      return { ...gameState, mistakes: gameState.mistakes + 1 };
+      const newState: GameState = {
+        ...gameState,
+        mistakes: gameState.mistakes + 1,
+      };
+      localStorage.setItem(
+        `state-${gameState.game.id}`,
+        JSON.stringify(newState)
+      );
+      return newState;
+    }
+
+    case GameActionType.RESET: {
+      const newState: GameState = {
+        selectedWords: [],
+        correctAnswers: [],
+        mistakes: 0,
+        game: gameState.game,
+        remainingWords: shuffleArray(
+          gameState.game.answers.flatMap(({ members }) => members)
+        ),
+      };
+      localStorage.setItem(
+        `state-${gameState.game.id}`,
+        JSON.stringify(newState)
+      );
+      return newState;
     }
 
     default: {

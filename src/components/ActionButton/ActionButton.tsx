@@ -1,11 +1,25 @@
 import { PropsWithChildren } from "react";
 
-export default function ActionButton(
-  props: React.ButtonHTMLAttributes<HTMLButtonElement> & PropsWithChildren
-) {
-  const { children, onClick } = props;
+interface ActionButtonProps {
+  variant?: "ghost";
+}
 
-  const className = "action-button " + props.className;
+export default function ActionButton(
+  props: React.ButtonHTMLAttributes<HTMLButtonElement> &
+    PropsWithChildren &
+    ActionButtonProps
+) {
+  const { children } = props;
+
+  let className = "action-button";
+
+  if (props.className) {
+    className += " " + props.className;
+  }
+
+  if (props.variant === "ghost") {
+    className += " ghost";
+  }
 
   return (
     <button
