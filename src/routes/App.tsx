@@ -1,7 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import styles from "./App.module.css";
-import { useEffect, useState } from "react";
-import { Bounce, toast, ToastContainer } from "react-toastify";
+import { Bounce, ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 import useTheme from "../hooks/useTheme";
@@ -76,21 +75,6 @@ export default function App() {
 
   return (
     <>
-      {/* <button
-        onClick={() =>
-          toast("One away...", {
-            style: {
-              background:
-                "linear-gradient(45deg, rgb(225, 165, 105) 0%, rgb(237, 99, 76) 100%)",
-              border: "3px solid rgb(48, 48, 48)",
-              color: "black",
-              fontFamily: "monospace",
-            },
-          })
-        }
-      >
-        test
-      </button> */}
       <ToastContainer
         position="top-center"
         autoClose={2000}

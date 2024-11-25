@@ -10,7 +10,6 @@ import {
 import { Answer, Game } from "../../App";
 import { useLoaderData } from "react-router-dom";
 import { shuffleArray } from "../../../utils";
-import { Bounce, toast, ToastContainer } from "react-toastify";
 
 const initialGameState = {
   correctAnswers: [],
