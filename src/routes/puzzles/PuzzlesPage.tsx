@@ -24,7 +24,10 @@ export default function PuzzlesPage() {
             return (
               <tr key={i}>
                 <th className={styles.td} scope="row">
-                  <Link style={{ color: "var(--color)" }} to={`${game.id}`}>
+                  <Link
+                    style={{ color: "var(--color)" }}
+                    to={`/puzzles/${game.id}`}
+                  >
                     Game #{game.id}{" "}
                   </Link>
                 </th>
