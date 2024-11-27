@@ -30,38 +30,6 @@
     }
   }
 
-  .correctAnswer {
-    width: 100%;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: #000000cf;
-    gap: 0.25rem;
-    margin-bottom: 12px;
-    border-radius: 0.5rem;
-    font-size: 1.1rem;
-    text-align: center;
-
-    &.level0 {
-      background-color: #f9df6d;
-    }
-    &.level1 {
-      background-color: #a0c35a;
-    }
-    &.level2 {
-      background-color: #b0c4ef;
-    }
-    &.level3 {
-      background-color: #ba81c5;
-    }
-
-    .group {
-      font-weight: bold;
-    }
-  }
-
   .grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(
@@ -104,6 +72,65 @@
   .mistakes {
     font-size: 0.8rem;
   }
+
+  .backdrop[open] {
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.515);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--background-color);
+      border-radius: 0.5rem;
+      /* min-height: 70vh; */
+      padding: 1rem;
+      color: var(--color);
+
+      .modalHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .modalTitle {
+          margin: 0;
+        }
+
+        .modalCloseBtn {
+          background-color: var(--background-color);
+          border: none;
+          color: var(--color);
+          font-size: 1.5rem;
+          cursor: pointer;
+          height: 1.7rem;
+          width: 1.7rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100%;
+
+          &:hover {
+            background-color: color-mix(
+              in hsl,
+              var(--color) 15%,
+              var(--background-color)
+            );
+          }
+        }
+      }
+    }
+  }
+
+  .backdrop[hidden] {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -127,9 +154,6 @@
       }
     }
 
-    .correctAnswer {
-      font-size: 1rem;
-    }
     .grid {
       gap: 4px;
 
@@ -148,9 +172,6 @@
 
 @media only screen and (min-width: 1200px) {
   .page {
-    .correctAnswer {
-      font-size: 1rem;
-    }
     .grid {
       gap: 14px;
 

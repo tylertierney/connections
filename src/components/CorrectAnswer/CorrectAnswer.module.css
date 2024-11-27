@@ -1,0 +1,43 @@
+.correctAnswer {
+  /* width: 100%; */
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #000000cf;
+  gap: 0.25rem;
+  margin-bottom: 12px;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+
+  &.level0 {
+    background-color: #f9df6d;
+  }
+  &.level1 {
+    background-color: #a0c35a;
+  }
+  &.level2 {
+    background-color: #b0c4ef;
+  }
+  &.level3 {
+    background-color: #ba81c5;
+  }
+
+  .group {
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .correctAnswer {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .correctAnswer {
+    font-size: 1rem;
+  }
+}

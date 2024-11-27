@@ -1,7 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { Game } from "../../App";
 import styles from "./GamePage.module.css";
-import { Dispatch, useEffect } from "react";
+import { Dispatch, useEffect, useRef } from "react";
 import c from "../../../connections.json";
 import "./GamePage.css";
 
@@ -14,10 +14,25 @@ import {
 import ActionButton from "../../../components/ActionButton/ActionButton";
 import { Bounce, toast } from "react-toastify";
 import { hasThreeCorrectWords } from "../../../utils";
+import CorrectAnswer from "../../../components/CorrectAnswer/CorrectAnswer";
+
+const closeIcon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 50 50"
+    width="1rem"
+    height="1rem"
+    stroke="var(--color)"
+    fill="var(--color)"
+  >
+    <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z" />
+  </svg>
+);
 
 export default function GamePage() {
   const game = useLoaderData() as Game;
   const { selectedWords, correctAnswers, remainingWords, mistakes } = useGame();
+  const modalRef = useRef<HTMLDialogElement | null>(null);
 
   const dispatch = useGameDispatch() as Dispatch<GameAction>;
 
@@ -47,6 +62,19 @@ export default function GamePage() {
     return "inherit";
   };
 
+  const showModal = () => {
+    if (!modalRef.current) return;
+
+    modalRef.current.showModal();
+  };
+
+  const hideModal = () => {
+    if (!modalRef.current) return;
+
+    console.log(modalRef.current);
+    modalRef.current.close();
+  };
+
   return (
     <div className={styles.page}>
       <header className={styles.header}>
@@ -73,14 +101,8 @@ export default function GamePage() {
           </div>
         </div>
       </header>
-      {correctAnswers.map(({ group, members, level }, i) => (
-        <div
-          className={`${styles.correctAnswer}  ${styles["level" + level]}`}
-          key={i}
-        >
-          <b className={styles.group}>{group}</b>
-          {members.join(", ")}
-        </div>
+      {correctAnswers.map((answer, i) => (
+        <CorrectAnswer key={i} answer={answer} />
       ))}
       <div className={styles.grid}>
         {remainingWords.map((word, i) => (
@@ -108,7 +130,10 @@ export default function GamePage() {
         <ActionButton
           className="submitBtn"
           onClick={() => {
-            if (hasThreeCorrectWords(selectedWords, game.answers)) {
+            if (
+              selectedWords.length === 4 &&
+              hasThreeCorrectWords(selectedWords, game.answers)
+            ) {
               toast("One away...", {
                 style: {
                   background:
@@ -154,9 +179,49 @@ export default function GamePage() {
       <ActionButton
         onClick={() => dispatch({ type: GameActionType.RESET })}
         variant="ghost"
+        style={{ marginBottom: "2rem" }}
       >
         Reset?
       </ActionButton>
+      <p
+        style={{
+          textAlign: "center",
+          fontSize: "0.8rem",
+        }}
+      >
+        <span style={{ fontSize: "1rem" }}>😭</span>
+        &nbsp;
+        <span
+          onClick={showModal}
+          style={{ textDecoration: "underline", cursor: "pointer" }}
+        >
+          This is too hard, just show me the answers
+        </span>
+        &nbsp;
+        <span style={{ fontSize: "1rem" }}>😢</span>
+      </p>
+      <dialog className={styles.backdrop} ref={modalRef} onClick={hideModal}>
+        <div
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+          className={styles.modal}
+        >
+          <div className={styles.modalHeader}>
+            <h2 className={styles.modalTitle}>Answers</h2>
+            <button
+              aria-label="close modal"
+              className={styles.modalCloseBtn}
+              onClick={hideModal}
+            >
+              {closeIcon}
+            </button>
+          </div>
+          {game.answers.map((answer, i) => (
+            <CorrectAnswer key={i} answer={answer} />
+          ))}
+        </div>
+      </dialog>
     </div>
   );
 }
