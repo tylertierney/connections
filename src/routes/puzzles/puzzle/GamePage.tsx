@@ -16,19 +16,6 @@ import { Bounce, toast } from "react-toastify";
 import { hasThreeCorrectWords } from "../../../utils";
 import CorrectAnswer from "../../../components/CorrectAnswer/CorrectAnswer";
 
-const closeIcon = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 50 50"
-    width="1rem"
-    height="1rem"
-    stroke="var(--color)"
-    fill="var(--color)"
-  >
-    <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z" />
-  </svg>
-);
-
 export default function GamePage() {
   const game = useLoaderData() as Game;
   const { selectedWords, correctAnswers, remainingWords, mistakes } = useGame();
@@ -75,6 +62,8 @@ export default function GamePage() {
     modalRef.current.close();
   };
 
+  c;
+
   return (
     <div className={styles.page}>
       <header className={styles.header}>
@@ -106,7 +95,8 @@ export default function GamePage() {
       ))}
       <div className={styles.grid}>
         {remainingWords.map((word, i) => (
-          <div
+          <button
+            role="button"
             key={i}
             className={`${styles.tile} ${
               selectedWords.includes(word) ? styles.selected : ""
@@ -122,7 +112,7 @@ export default function GamePage() {
                 {w}
               </span>
             ))}
-          </div>
+          </button>
         ))}
       </div>
 
@@ -209,13 +199,23 @@ export default function GamePage() {
         >
           <div className={styles.modalHeader}>
             <h2 className={styles.modalTitle}>Answers</h2>
-            <button
-              aria-label="close modal"
-              className={styles.modalCloseBtn}
+            <svg
               onClick={hideModal}
+              className={styles.closeIcon}
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 50 50"
+              role="button"
+              aria-label="close modal"
+              aria-roledescription="closes the 'answers' modal"
             >
-              {closeIcon}
-            </button>
+              <path
+                stroke="inherit"
+                fill="inherit"
+                color="inherit"
+                d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"
+              />
+            </svg>
           </div>
           {game.answers.map((answer, i) => (
             <CorrectAnswer key={i} answer={answer} />
