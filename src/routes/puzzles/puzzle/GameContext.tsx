@@ -11,12 +11,13 @@ import { Answer, Game } from "../../App";
 import { useLoaderData } from "react-router-dom";
 import { shuffleArray } from "../../../utils";
 
-const initialGameState = {
+const initialGameState: GameState = {
   correctAnswers: [],
   game: { id: 1000, date: "", answers: [] },
   remainingWords: [],
   selectedWords: [],
   mistakes: 0,
+  results: [],
 };
 
 export const GameContext = createContext<GameState>(initialGameState);
@@ -24,12 +25,38 @@ export const GameDispatchContext = createContext<Dispatch<GameAction> | null>(
   null
 );
 
+export type emoji = "🟨" | "🟩" | "🟦" | "🟪";
+const getResult = (answers: Answer[], selectedWords: string[]): emoji[] => {
+  const result: emoji[] = [];
+
+  const flatMembers = answers.flatMap(({ members }) => members);
+  for (const w of selectedWords) {
+    const index = flatMembers.findIndex((word) => word === w);
+    switch (~~(index / 4)) {
+      case 0:
+        result.push("🟨");
+        break;
+      case 1:
+        result.push("🟩");
+        break;
+      case 2:
+        result.push("🟦");
+        break;
+      case 3:
+        result.push("🟪");
+        break;
+    }
+  }
+  return result;
+};
+
 export interface GameState {
   game: Game;
   selectedWords: string[];
   correctAnswers: Answer[];
   remainingWords: string[];
   mistakes: number;
+  results: Array<emoji[]>;
 }
 
 export enum GameActionType {
@@ -96,6 +123,7 @@ const gameReducer: Reducer<GameState, GameAction> = (
           action.game.answers.flatMap((answer) => answer.members)
         ),
         mistakes: 0,
+        results: [],
       };
     }
 
@@ -158,7 +186,7 @@ const gameReducer: Reducer<GameState, GameAction> = (
         if (count === 4) {
           const newCorrectAnswers = [...gameState.correctAnswers, answer];
 
-          const newState = {
+          const newState: GameState = {
             ...gameState,
             selectedWords: [],
             correctAnswers: [...gameState.correctAnswers, answer],
@@ -166,6 +194,10 @@ const gameReducer: Reducer<GameState, GameAction> = (
               const foundWords = newCorrectAnswers.flatMap((a) => a.members);
               return !foundWords.includes(word);
             }),
+            results: [
+              ...gameState.results,
+              getResult(game.answers, selectedWords),
+            ],
           };
           localStorage.setItem(
             `state-${gameState.game.id}`,
@@ -178,6 +210,7 @@ const gameReducer: Reducer<GameState, GameAction> = (
       const newState: GameState = {
         ...gameState,
         mistakes: gameState.mistakes + 1,
+        results: [...gameState.results, getResult(game.answers, selectedWords)],
       };
       localStorage.setItem(
         `state-${gameState.game.id}`,
@@ -195,6 +228,7 @@ const gameReducer: Reducer<GameState, GameAction> = (
         remainingWords: shuffleArray(
           gameState.game.answers.flatMap(({ members }) => members)
         ),
+        results: [],
       };
       localStorage.setItem(
         `state-${gameState.game.id}`,

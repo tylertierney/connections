@@ -15,10 +15,12 @@ import ActionButton from "../../../components/ActionButton/ActionButton";
 import { Bounce, toast } from "react-toastify";
 import { hasThreeCorrectWords } from "../../../utils";
 import CorrectAnswer from "../../../components/CorrectAnswer/CorrectAnswer";
+import Results from "../../../components/Results/Results";
 
 export default function GamePage() {
   const game = useLoaderData() as Game;
-  const { selectedWords, correctAnswers, remainingWords, mistakes } = useGame();
+  const { selectedWords, correctAnswers, remainingWords, mistakes, results } =
+    useGame();
   const modalRef = useRef<HTMLDialogElement | null>(null);
 
   const dispatch = useGameDispatch() as Dispatch<GameAction>;
@@ -58,7 +60,6 @@ export default function GamePage() {
   const hideModal = () => {
     if (!modalRef.current) return;
 
-    console.log(modalRef.current);
     modalRef.current.close();
   };
 
@@ -173,55 +174,65 @@ export default function GamePage() {
       >
         Reset?
       </ActionButton>
-      <p
-        style={{
-          textAlign: "center",
-          fontSize: "0.8rem",
-        }}
-      >
-        <span style={{ fontSize: "1rem" }}>😭</span>
-        &nbsp;
-        <span
-          onClick={showModal}
-          style={{ textDecoration: "underline", cursor: "pointer" }}
-        >
-          This is too hard, just show me the answers
-        </span>
-        &nbsp;
-        <span style={{ fontSize: "1rem" }}>😢</span>
-      </p>
-      <dialog className={styles.backdrop} ref={modalRef} onClick={hideModal}>
-        <div
-          onClick={(e) => {
-            e.stopPropagation();
-          }}
-          className={styles.modal}
-        >
-          <div className={styles.modalHeader}>
-            <h2 className={styles.modalTitle}>Answers</h2>
-            <svg
-              onClick={hideModal}
-              className={styles.closeIcon}
-              xmlns="http://www.w3.org/2000/svg"
-              xmlnsXlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 50 50"
-              role="button"
-              aria-label="close modal"
-              aria-roledescription="closes the 'answers' modal"
+      {correctAnswers.length === 4 ? (
+        <Results results={results} />
+      ) : (
+        <>
+          <p
+            style={{
+              textAlign: "center",
+              fontSize: "0.8rem",
+            }}
+          >
+            <span style={{ fontSize: "1rem" }}>😭</span>
+            &nbsp;
+            <span
+              onClick={showModal}
+              style={{ textDecoration: "underline", cursor: "pointer" }}
             >
-              <path
-                stroke="inherit"
-                fill="inherit"
-                color="inherit"
-                d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"
-              />
-            </svg>
-          </div>
-          {game.answers.map((answer, i) => (
-            <CorrectAnswer key={i} answer={answer} />
-          ))}
-        </div>
-      </dialog>
+              This is too hard, just show me the answers
+            </span>
+            &nbsp;
+            <span style={{ fontSize: "1rem" }}>😢</span>
+          </p>
+          <dialog
+            className={styles.backdrop}
+            ref={modalRef}
+            onClick={hideModal}
+          >
+            <div
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
+              className={styles.modal}
+            >
+              <div className={styles.modalHeader}>
+                <h2 className={styles.modalTitle}>Answers</h2>
+                <svg
+                  onClick={hideModal}
+                  className={styles.closeIcon}
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 50 50"
+                  role="button"
+                  aria-label="close modal"
+                  aria-roledescription="closes the 'answers' modal"
+                >
+                  <path
+                    stroke="inherit"
+                    fill="inherit"
+                    color="inherit"
+                    d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"
+                  />
+                </svg>
+              </div>
+              {game.answers.map((answer, i) => (
+                <CorrectAnswer key={i} answer={answer} />
+              ))}
+            </div>
+          </dialog>
+        </>
+      )}
     </div>
   );
 }
