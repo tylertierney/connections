@@ -63,8 +63,6 @@ export default function GamePage() {
     modalRef.current.close();
   };
 
-  c;
-
   return (
     <div className={styles.page}>
       <header className={styles.header}>
