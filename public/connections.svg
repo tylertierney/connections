@@ -1,0 +1,7 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs></defs>
+  <path style="fill: rgb(249, 223, 109);" d="M 16 6 H 240 A 6 6 0 0 1 246 12 V 236 A 8 8 0 0 1 238 244 H 16 A 8 8 0 0 1 8 236 V 14 A 8 8 0 0 1 16 6 Z" bx:shape="rect 8 6 238 238 8 6 8 8 1@dcc64b18"></path>
+  <rect style="fill: rgb(160, 195, 90);" x="254" y="6" width="238" height="238" rx="8" ry="8"></rect>
+  <rect style="fill: rgb(176, 196, 239);" x="8" y="252" width="238" height="238" rx="8" ry="8"></rect>
+  <rect style="fill: rgb(186, 129, 197);" x="254" y="252" width="238" height="238" rx="8" ry="8"></rect>
+</svg>
