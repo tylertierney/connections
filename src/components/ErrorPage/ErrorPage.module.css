@@ -1,0 +1,12 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+  font-family: monospace;
+
+  .emoji {
+    font-size: 4rem;
+  }
+}

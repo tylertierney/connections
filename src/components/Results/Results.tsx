@@ -5,7 +5,7 @@ interface ResultsProps {
   results: emoji[][];
 }
 
-export default function Results({ results }: ResultsProps) {
+export default function Results({ results = [] }: ResultsProps) {
   return (
     <div className={styles.resultsContainer}>
       {results.map((result, i) => (

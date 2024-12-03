@@ -7,12 +7,13 @@ import GamePage from "./routes/puzzles/puzzle/GamePage.tsx";
 import connections from "./connections.json";
 import { GameProvider } from "./routes/puzzles/puzzle/GameContext.tsx";
 import PuzzlesPage from "./routes/puzzles/PuzzlesPage.tsx";
+import ErrorPage from "./components/ErrorPage/ErrorPage.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <span>oh noooo</span>,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <PuzzlesPage /> },
       {
