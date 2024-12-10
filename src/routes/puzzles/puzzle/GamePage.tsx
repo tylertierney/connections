@@ -1,7 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { Game } from "../../App";
 import styles from "./GamePage.module.css";
-import { Dispatch, MutableRefObject, Ref, useEffect, useRef } from "react";
+import { Dispatch, MutableRefObject, useEffect, useRef } from "react";
 import c from "../../../connections.json";
 import "./GamePage.css";
 
