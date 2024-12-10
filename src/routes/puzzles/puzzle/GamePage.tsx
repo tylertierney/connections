@@ -1,7 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { Game } from "../../App";
 import styles from "./GamePage.module.css";
-import { Dispatch, useEffect, useRef } from "react";
+import { Dispatch, MutableRefObject, Ref, useEffect, useRef } from "react";
 import c from "../../../connections.json";
 import "./GamePage.css";
 
@@ -22,6 +22,7 @@ export default function GamePage() {
   const { selectedWords, correctAnswers, remainingWords, mistakes, results } =
     useGame();
   const modalRef = useRef<HTMLDialogElement | null>(null);
+  const gridRef = useRef<HTMLDivElement | null>(null);
 
   const dispatch = useGameDispatch() as Dispatch<GameAction>;
 
@@ -63,6 +64,24 @@ export default function GamePage() {
     modalRef.current.close();
   };
 
+  const applyAnimations = (
+    gridRef: MutableRefObject<HTMLDivElement | null>
+  ) => {
+    if (!gridRef.current) {
+      return;
+    }
+
+    for (const node of gridRef.current.children) {
+      if (selectedWords.includes(node.getAttribute("data-word") ?? "")) {
+        node.classList.add("shake");
+      }
+
+      setTimeout(() => {
+        node.classList.remove("shake");
+      }, 1000);
+    }
+  };
+
   return (
     <div className={styles.page}>
       <header className={styles.header}>
@@ -92,7 +111,7 @@ export default function GamePage() {
       {correctAnswers.map((answer, i) => (
         <CorrectAnswer key={i} answer={answer} />
       ))}
-      <div className={styles.grid}>
+      <div className={styles.grid} ref={gridRef}>
         {remainingWords.map((word, i) => (
           <button
             role="button"
@@ -101,6 +120,7 @@ export default function GamePage() {
               selectedWords.includes(word) ? styles.selected : ""
             }`}
             onClick={() => dispatch({ type: GameActionType.SELECT_WORD, word })}
+            data-word={word}
           >
             {word.split(" ").map((w, i, arr) => (
               <span
@@ -134,7 +154,10 @@ export default function GamePage() {
                 transition: Bounce,
               });
             }
-            dispatch({ type: GameActionType.SUBMIT });
+            dispatch({
+              type: GameActionType.SUBMIT,
+              onIncorrectAnswer: () => applyAnimations(gridRef),
+            });
           }}
         >
           Submit
@@ -178,6 +201,7 @@ export default function GamePage() {
         <>
           <p
             style={{
+              marginTop: "5rem",
               textAlign: "center",
               fontSize: "0.8rem",
             }}

@@ -30,3 +30,35 @@
     }
   }
 }
+
+.shake {
+  animation-name: shake;
+  animation-duration: 300ms;
+
+  animation-fill-mode: forwards;
+}
+
+@keyframes shake {
+  0% {
+    translate: 0;
+  }
+
+  33% {
+    translate: -4px;
+    background-color: rgb(255, 85, 85);
+    background-color: color-mix(
+      in hsl,
+      rgb(255, 85, 85) 50%,
+      var(--tile-selected-background-color)
+    );
+  }
+
+  66% {
+    translate: 4px;
+  }
+
+  100% {
+    translate: 0;
+    background-color: var(--tile-selected-background-color);
+  }
+}

@@ -70,7 +70,11 @@ export enum GameActionType {
 
 export type GameAction =
   | { type: GameActionType.SELECT_WORD; word: string }
-  | { type: GameActionType.SUBMIT }
+  | {
+      type: GameActionType.SUBMIT;
+      onCorrectAnswer?: () => void;
+      onIncorrectAnswer?: () => void;
+    }
   | { type: GameActionType.INIT; game: Game }
   | { type: GameActionType.SHUFFLE }
   | { type: GameActionType.CLEAR }
@@ -203,6 +207,7 @@ const gameReducer: Reducer<GameState, GameAction> = (
             `state-${gameState.game.id}`,
             JSON.stringify(newState)
           );
+          action.onCorrectAnswer?.();
           return newState;
         }
       }
@@ -216,6 +221,7 @@ const gameReducer: Reducer<GameState, GameAction> = (
         `state-${gameState.game.id}`,
         JSON.stringify(newState)
       );
+      action.onIncorrectAnswer?.();
       return newState;
     }
 
