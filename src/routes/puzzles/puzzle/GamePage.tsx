@@ -1,7 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { Game } from "../../App";
 import styles from "./GamePage.module.css";
-import { Dispatch, MutableRefObject, useEffect, useRef } from "react";
+import { Dispatch, MutableRefObject, useRef } from "react";
 import c from "../../../connections.json";
 import "./GamePage.css";
 
@@ -16,6 +16,7 @@ import { Bounce, toast } from "react-toastify";
 import { hasThreeCorrectWords } from "../../../utils";
 import CorrectAnswer from "../../../components/CorrectAnswer/CorrectAnswer";
 import Results from "../../../components/Results/Results";
+import Grid from "../../../components/Grid/Grid";
 
 export default function GamePage() {
   const game = useLoaderData() as Game;
@@ -32,25 +33,10 @@ export default function GamePage() {
     year: "numeric",
   });
 
-  useEffect(() => {
-    console.log(game);
-  }, [game]);
-
   const connections = c as Game[];
 
   const nextGame = connections.find(({ id }) => id === game.id + 1);
   const previousGame = connections.find(({ id }) => id === game.id - 1);
-
-  const getFontSize = (words: string[]): string => {
-    if (words.some((w) => w.length > 15)) {
-      return "80%";
-    }
-    if (words.some((w) => w.length > 10)) {
-      return "88%";
-    }
-
-    return "inherit";
-  };
 
   const showModal = () => {
     if (!modalRef.current) return;
@@ -108,32 +94,12 @@ export default function GamePage() {
           </div>
         </div>
       </header>
-      {correctAnswers.map((answer, i) => (
-        <CorrectAnswer key={i} answer={answer} />
-      ))}
-      <div className={styles.grid} ref={gridRef}>
-        {remainingWords.map((word, i) => (
-          <button
-            role="button"
-            key={i}
-            className={`${styles.tile} ${
-              selectedWords.includes(word) ? styles.selected : ""
-            }`}
-            onClick={() => dispatch({ type: GameActionType.SELECT_WORD, word })}
-            data-word={word}
-          >
-            {word.split(" ").map((w, i, arr) => (
-              <span
-                key={i}
-                className={styles.label}
-                style={{ fontSize: getFontSize(arr) }}
-              >
-                {w}
-              </span>
-            ))}
-          </button>
-        ))}
-      </div>
+      <Grid
+        correctAnswers={correctAnswers}
+        gridRef={gridRef}
+        remainingWords={remainingWords}
+        selectedWords={selectedWords}
+      />
 
       <div className="actionBtns">
         <ActionButton
