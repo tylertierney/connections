@@ -14312,5 +14312,317 @@
         "members": ["KETCHUM", "PAYPAL", "PRIMATE", "ROSEBUD"]
       }
     ]
+  },
+  {
+    "id": 550,
+    "date": "2024-12-12",
+    "answers": [
+      {
+        "level": 0,
+        "group": "THINGS THAT SOUND LIKE \"T\"",
+        "members": ["TEA", "TEE (GOLF)", "TEE (SHIRT)", "TI (MUSICAL NOTE)"]
+      },
+      {
+        "level": 1,
+        "group": "OBJECTS WITH TEETH",
+        "members": ["COMB", "GEAR", "SAW", "ZIPPER"]
+      },
+      {
+        "level": 2,
+        "group": "MILD OATHS",
+        "members": ["FUDGE", "GEEZ", "NUTS", "RATS"]
+      },
+      {
+        "level": 3,
+        "group": "PARTS OF A RIVER",
+        "members": ["BANK", "BED", "DELTA", "MOUTH"]
+      }
+    ]
+  },
+  {
+    "id": 551,
+    "date": "2024-12-13",
+    "answers": [
+      {
+        "level": 0,
+        "group": "FANTASY CREATURES",
+        "members": ["DRAGON", "GIANT", "PIXIE", "TROLL"]
+      },
+      {
+        "level": 1,
+        "group": "EMAIL FOLDERS",
+        "members": ["DRAFTS", "SENT", "SPAM", "TRASH"]
+      },
+      {
+        "level": 2,
+        "group": "CITRUS SODAS",
+        "members": ["CRUSH", "SPRITE", "SQUIRT", "STARRY"]
+      },
+      {
+        "level": 3,
+        "group": "ANIMAL HOMOPHONES",
+        "members": ["BORE", "LINKS", "PHISH", "TOWED"]
+      }
+    ]
+  },
+  {
+    "id": 552,
+    "date": "2024-12-14",
+    "answers": [
+      {
+        "level": 0,
+        "group": "FISH",
+        "members": ["FLUKE", "MULLET", "SOLE", "TANG"]
+      },
+      {
+        "level": 1,
+        "group": "WORDS IN AN AUCTION-ENDING PHRASE",
+        "members": ["GOING", "ONCE", "SOLD", "TWICE"]
+      },
+      {
+        "level": 2,
+        "group": "GLOBAL CURRENCIES",
+        "members": ["POUND", "REAL", "SOL", "YUAN"]
+      },
+      {
+        "level": 3,
+        "group": "WORDS BEFORE \u201cCUP\u201d",
+        "members": ["BUTTER", "DIVA", "SOLO", "WORLD"]
+      }
+    ]
+  },
+  {
+    "id": 553,
+    "date": "2024-12-15",
+    "answers": [
+      {
+        "level": 0,
+        "group": "SPICES",
+        "members": ["CLOVE", "MACE", "NUTMEG", "PEPPER"]
+      },
+      {
+        "level": 1,
+        "group": "PERFORM POORLY",
+        "members": ["FLAIL", "FLOP", "FLOUNDER", "TANK"]
+      },
+      {
+        "level": 2,
+        "group": "SKIM THROUGH, AS PAGES",
+        "members": ["FLIP", "LEAF", "RIFFLE", "THUMB"]
+      },
+      {
+        "level": 3,
+        "group": "POP SINGERS MINUS \u201cS\u201d",
+        "members": ["KEY", "MAR", "SPEAR", "STYLE"]
+      }
+    ]
+  },
+  {
+    "id": 554,
+    "date": "2024-12-16",
+    "answers": [
+      {
+        "level": 0,
+        "group": "TYPES OF RADIO",
+        "members": ["AM", "HAM", "SATELLITE", "WALKIE-TALKIE"]
+      },
+      {
+        "level": 1,
+        "group": "KINDS OF PLAY FIGHTS",
+        "members": ["FOOD", "PILLOW", "SNOWBALL", "WATER BALLOON"]
+      },
+      {
+        "level": 2,
+        "group": "SNACK CAKES",
+        "members": ["DEVIL DOG", "DING DONG", "HOHO", "YODEL"]
+      },
+      {
+        "level": 3,
+        "group": "CLASSIC JOKE STAPLES",
+        "members": ["BAR", "CHICKEN", "KNOCK-KNOCK", "LIGHT BULB"]
+      }
+    ]
+  },
+  {
+    "id": 555,
+    "date": "2024-12-17",
+    "answers": [
+      {
+        "level": 0,
+        "group": "INTREPIDITY",
+        "members": ["GRIT", "HEART", "NERVE", "PLUCK"]
+      },
+      {
+        "level": 1,
+        "group": "ROAD",
+        "members": ["ARTERY", "AVENUE", "DRAG", "DRIVE"]
+      },
+      {
+        "level": 2,
+        "group": "KINDS OF PAPER",
+        "members": ["CONSTRUCTION", "GRAPH", "TISSUE", "WAX"]
+      },
+      {
+        "level": 3,
+        "group": "KINDS OF TENNIS COURTS",
+        "members": ["CARPET", "CLAY", "GRASS", "HARD"]
+      }
+    ]
+  },
+  {
+    "id": 556,
+    "date": "2024-12-18",
+    "answers": [
+      {
+        "level": 0,
+        "group": "DEAL WITH",
+        "members": ["FIELD", "HANDLE", "MANAGE", "TACKLE"]
+      },
+      {
+        "level": 1,
+        "group": "STYLES OF BEER",
+        "members": ["BITTER", "BOCK", "SOUR", "STOUT"]
+      },
+      {
+        "level": 2,
+        "group": "INVESTMENT VERBS",
+        "members": ["HEDGE", "HOLD", "SHORT", "TRADE"]
+      },
+      {
+        "level": 3,
+        "group": "___ DOME",
+        "members": ["CAPITOL", "CHROME", "ONION", "TEAPOT"]
+      }
+    ]
+  },
+  {
+    "id": 557,
+    "date": "2024-12-19",
+    "answers": [
+      {
+        "level": 0,
+        "group": "DEFER",
+        "members": ["DELAY", "POSTPONE", "SHELVE", "TABLE"]
+      },
+      {
+        "level": 1,
+        "group": "BAR FIXTURES",
+        "members": ["COUNTER", "KEG", "STOOL", "TAP"]
+      },
+      {
+        "level": 2,
+        "group": "WATERCRAFT",
+        "members": ["BARGE", "JUNK", "SUB", "TUG"]
+      },
+      {
+        "level": 3,
+        "group": "SEEN IN \u201cDONKEY KONG\u201d",
+        "members": ["BARREL", "GORILLA", "HAMMER", "LADDER"]
+      }
+    ]
+  },
+  {
+    "id": 558,
+    "date": "2024-12-20",
+    "answers": [
+      {
+        "level": 0,
+        "group": "CONCOCTION",
+        "members": ["COCKTAIL", "COMPOUND", "MIXTURE", "SOLUTION"]
+      },
+      {
+        "level": 1,
+        "group": "TYPES OF SENTENCES",
+        "members": ["COMMAND", "EXCLAMATION", "QUESTION", "STATEMENT"]
+      },
+      {
+        "level": 2,
+        "group": "KINDS OF BROS",
+        "members": ["CRYPTO", "FINANCE", "PHARMA", "TECH"]
+      },
+      {
+        "level": 3,
+        "group": "COMPLAINT HOMOPHONES",
+        "members": ["GROWN", "MOWN", "WHALE", "WINE"]
+      }
+    ]
+  },
+  {
+    "id": 559,
+    "date": "2024-12-21",
+    "answers": [
+      {
+        "level": 0,
+        "group": "LOOP",
+        "members": ["BAND", "CIRCLE", "HOOP", "RING"]
+      },
+      {
+        "level": 1,
+        "group": "COOKING VESSELS",
+        "members": ["CASSEROLE", "CROCK", "PAN", "POT"]
+      },
+      {
+        "level": 2,
+        "group": "KINDS OF BEDS",
+        "members": ["BUNK", "CANOPY", "MURPHY", "SLEIGH"]
+      },
+      {
+        "level": 3,
+        "group": "THINGS CALLED \u201cOSCAR\u201d",
+        "members": ["BALONEY", "GROUCH", "O", "STATUETTE"]
+      }
+    ]
+  },
+  {
+    "id": 560,
+    "date": "2024-12-22",
+    "answers": [
+      {
+        "level": 0,
+        "group": "SLANG FOR HEAD",
+        "members": ["COCONUT", "CROWN", "DOME", "SKULL"]
+      },
+      {
+        "level": 1,
+        "group": "PALINDROMES",
+        "members": ["ABBA", "KAYAK", "NUN", "STATS"]
+      },
+      {
+        "level": 2,
+        "group": "POLICE PROCEDURALS",
+        "members": ["BONES", "ELEMENTARY", "KOJAK", "MONK"]
+      },
+      {
+        "level": 3,
+        "group": "FIRST IN A COMEDY DUO",
+        "members": ["ABBOTT", "FRY", "KEY", "LAUREL"]
+      }
+    ]
+  },
+  {
+    "id": 561,
+    "date": "2024-12-23",
+    "answers": [
+      {
+        "level": 0,
+        "group": "HOMOPHONES",
+        "members": ["EWE", "U", "YEW", "YOU"]
+      },
+      {
+        "level": 1,
+        "group": "NECKLINES",
+        "members": ["BOAT", "CREW", "SCOOP", "V"]
+      },
+      {
+        "level": 2,
+        "group": "WAYS TO EXPRESS 1,000",
+        "members": ["GRAND", "K", "M", "THOU"]
+      },
+      {
+        "level": 3,
+        "group": "SUPER ___",
+        "members": ["8", "BOWL", "GLUE", "TUESDAY"]
+      }
+    ]
   }
 ]
