@@ -14624,5 +14624,400 @@
         "members": ["8", "BOWL", "GLUE", "TUESDAY"]
       }
     ]
+  },
+  {
+    "id": 562,
+    "date": "2024-12-24",
+    "answers": [
+      {
+        "level": 0,
+        "group": "\u201cLIONS AND TIGERS AND BEARS, OH MY!\u201d",
+        "members": ["BEARS", "LIONS", "OH MY", "TIGERS"]
+      },
+      {
+        "level": 1,
+        "group": "BELOVED, AS A FRIEND",
+        "members": ["CLOSE", "DEAR", "INTIMATE", "TIGHT"]
+      },
+      {
+        "level": 2,
+        "group": "WORDS THAT SOUND LIKE PLURAL LETTERS",
+        "members": ["BEES", "EASE", "JAYS", "USE"]
+      },
+      {
+        "level": 3,
+        "group": "WHEN TRIPLED, HIT SONG TITLES",
+        "members": ["BILLS", "BYE", "GIMME", "PLEASE"]
+      }
+    ]
+  },
+  {
+    "id": 563,
+    "date": "2024-12-25",
+    "answers": [
+      {
+        "level": 0,
+        "group": "CELESTIAL OBJECTS",
+        "members": ["COMET", "MOON", "PLANET", "STAR"]
+      },
+      {
+        "level": 1,
+        "group": "ARCHERS",
+        "members": ["CUPID", "HAWKEYE", "ROBIN HOOD", "SAGITTARIUS"]
+      },
+      {
+        "level": 2,
+        "group": "FEMALE ANIMALS",
+        "members": ["JENNY", "NANNY", "QUEEN", "VIXEN"]
+      },
+      {
+        "level": 3,
+        "group": "\u201cS.N.L.\u201d CAST MEMBERS",
+        "members": ["FEY", "RUDOLPH", "SHANNON", "STRONG"]
+      }
+    ]
+  },
+  {
+    "id": 564,
+    "date": "2024-12-26",
+    "answers": [
+      {
+        "level": 0,
+        "group": "APPROXIMATELY",
+        "members": ["ABOUT", "AROUND", "LIKE", "ROUGHLY"]
+      },
+      {
+        "level": 1,
+        "group": "TREES",
+        "members": ["ELDER", "PALM", "PINE", "SPRUCE"]
+      },
+      {
+        "level": 2,
+        "group": "SIZABLE, AS AN AMOUNT",
+        "members": ["HANDSOME", "HEALTHY", "RESPECTABLE", "TIDY"]
+      },
+      {
+        "level": 3,
+        "group": "U.S. STATE ABBREVIATIONS, PER AP STYLE GUIDE",
+        "members": ["ALA", "ARK", "MISS", "ORE"]
+      }
+    ]
+  },
+  {
+    "id": 565,
+    "date": "2024-12-27",
+    "answers": [
+      {
+        "level": 0,
+        "group": "BREAKFAST SIDES",
+        "members": ["BACON", "GRITS", "HASH", "TOAST"]
+      },
+      {
+        "level": 1,
+        "group": "PUSHES, AS A BUTTON",
+        "members": ["CLICKS", "HITS", "PRESSES", "TAPS"]
+      },
+      {
+        "level": 2,
+        "group": "THEY HAVE A HORN",
+        "members": ["AFRICA", "BUGLER", "CAR", "UNICORN"]
+      },
+      {
+        "level": 3,
+        "group": "OSCAR-WINNING ACTORS",
+        "members": ["BRIDGES", "IRONS", "PHOENIX", "WASHINGTON"]
+      }
+    ]
+  },
+  {
+    "id": 566,
+    "date": "2024-12-28",
+    "answers": [
+      {
+        "level": 0,
+        "group": "\u201cNOTHING TO IT!\u201d",
+        "members": ["EASY", "NO SWEAT", "PIECE OF CAKE", "SURE THING"]
+      },
+      {
+        "level": 1,
+        "group": "OBJECTS FROM GREEK MYTH",
+        "members": [
+          "AEGIS",
+          "APPLE OF DISCORD",
+          "GOLDEN FLEECE",
+          "PANDORA\u2019S BOX"
+        ]
+      },
+      {
+        "level": 2,
+        "group": "PROVERBIAL THINGS TO KICK",
+        "members": ["CAN", "HABIT", "HORNETS\u2019 NEST", "TIRES"]
+      },
+      {
+        "level": 3,
+        "group": "STARTING WITH POSSESSIVE PRONOUNS",
+        "members": ["HERSHEY", "HISTAMINE", "ITSY", "MINEFIELD"]
+      }
+    ]
+  },
+  {
+    "id": 567,
+    "date": "2024-12-29",
+    "answers": [
+      {
+        "level": 0,
+        "group": "SHADES OF RED",
+        "members": ["BRICK", "CHERRY", "MAROON", "RUBY"]
+      },
+      {
+        "level": 1,
+        "group": "APPOINTMENT SPECIFICATIONS",
+        "members": ["DATE", "DURATION", "LOCATION", "TIME"]
+      },
+      {
+        "level": 2,
+        "group": "DIFFERENT AMOUNTS OF HAIR",
+        "members": ["HEAD", "LOCK", "STRAND", "WISP"]
+      },
+      {
+        "level": 3,
+        "group": "TREE HOMOPHONES",
+        "members": ["BEACH", "FUR", "PAIR", "YOU"]
+      }
+    ]
+  },
+  {
+    "id": 568,
+    "date": "2024-12-30",
+    "answers": [
+      {
+        "level": 0,
+        "group": "LUNCH ORDERS",
+        "members": ["CLUB", "HERO", "MELT", "WRAP"]
+      },
+      {
+        "level": 1,
+        "group": "USED TO MAKE COFFEE",
+        "members": ["BEANS", "FILTER", "GRINDER", "WATER"]
+      },
+      {
+        "level": 2,
+        "group": "PAY, WITH \u201cUP\u201d",
+        "members": ["ANTE", "COUGH", "PONY", "SETTLE"]
+      },
+      {
+        "level": 3,
+        "group": "NAMES FEATURING \"!\"",
+        "members": ["AIRPLANE", "JEOPARDY", "PINK", "YAHOO"]
+      }
+    ]
+  },
+  {
+    "id": 569,
+    "date": "2024-12-31",
+    "answers": [
+      {
+        "level": 0,
+        "group": "MOVE QUICKLY",
+        "members": ["BOLT", "DART", "DASH", "FLY"]
+      },
+      {
+        "level": 1,
+        "group": "FUN TIME",
+        "members": ["BALL", "BLAST", "KICK", "THRILL"]
+      },
+      {
+        "level": 2,
+        "group": "WORDS BEFORE AN ADDRESSEE",
+        "members": ["ATTENTION", "DEAR", "FOR", "TO"]
+      },
+      {
+        "level": 3,
+        "group": "NAME ___",
+        "members": ["BRAND", "DROP", "GAME", "NAMES"]
+      }
+    ]
+  },
+  {
+    "id": 570,
+    "date": "2025-01-01",
+    "answers": [
+      {
+        "level": 0,
+        "group": "SLIMY ANIMALS",
+        "members": ["EARTHWORM", "EEL", "SALAMANDER", "SLUG"]
+      },
+      {
+        "level": 1,
+        "group": "THINGS THAT LUMINESCE",
+        "members": ["AURORA", "FIREFLY", "GLOWSTICK", "RADIUM"]
+      },
+      {
+        "level": 2,
+        "group": "DUTCH SYMBOLS",
+        "members": ["CANAL", "CLOG", "TULIP", "WINDMILL"]
+      },
+      {
+        "level": 3,
+        "group": "ENDING WITH SYNONYMS FOR \u201cPLUNGE\u201d",
+        "members": ["GATECRASH", "RAINDROP", "SKYDIVE", "WATERFALL"]
+      }
+    ]
+  },
+  {
+    "id": 571,
+    "date": "2025-01-02",
+    "answers": [
+      {
+        "level": 0,
+        "group": "PERCEIVE",
+        "members": ["CATCH", "CLOCK", "NOTICE", "REGISTER"]
+      },
+      {
+        "level": 1,
+        "group": "CADENCE",
+        "members": ["BEAT", "METER", "RHYTHM", "TIME"]
+      },
+      {
+        "level": 2,
+        "group": "ONE IN A GROUP OF TWELVE",
+        "members": ["DONUT", "INCH", "JUROR", "MONTH"]
+      },
+      {
+        "level": 3,
+        "group": "DOG ___",
+        "members": ["DAYS", "PADDLE", "TAG", "TIRED"]
+      }
+    ]
+  },
+  {
+    "id": 572,
+    "date": "2025-01-03",
+    "answers": [
+      {
+        "level": 0,
+        "group": "PARTS OF A FOOT",
+        "members": ["ARCH", "BALL", "HEEL", "SOLE"]
+      },
+      {
+        "level": 1,
+        "group": "ONE DOLLAR",
+        "members": ["BUCK", "CLAM", "SINGLE", "SMACKER"]
+      },
+      {
+        "level": 2,
+        "group": "KINDS OF MUSHROOMS",
+        "members": ["BUTTON", "MOREL", "OYSTER", "TRUMPET"]
+      },
+      {
+        "level": 3,
+        "group": "POT___",
+        "members": ["BELLY", "HOLE", "LUCK", "STICKER"]
+      }
+    ]
+  },
+  {
+    "id": 573,
+    "date": "2025-01-04",
+    "answers": [
+      {
+        "level": 0,
+        "group": "CRUSH INTO A COMPACT SHAPE",
+        "members": ["BALL", "CRUMPLE", "SCRUNCH", "WAD"]
+      },
+      {
+        "level": 1,
+        "group": "FASTENERS",
+        "members": ["BUCKLE", "CLIP", "HOOK", "SNAP"]
+      },
+      {
+        "level": 2,
+        "group": "MARK AS COMPLETED",
+        "members": ["CHECK", "CROSS", "STRIKE", "TICK"]
+      },
+      {
+        "level": 3,
+        "group": "DEPICTED IN DAL\u00cd\u2019S \u201cTHE PERSISTENCE OF MEMORY\u201d",
+        "members": ["ANT", "BRANCH", "CLOCK", "MELTING"]
+      }
+    ]
+  },
+  {
+    "id": 574,
+    "date": "2025-01-05",
+    "answers": [
+      {
+        "level": 0,
+        "group": "HARDLY BUSTLING",
+        "members": ["CALM", "QUIET", "SLEEPY", "SLOW"]
+      },
+      {
+        "level": 1,
+        "group": "EARN",
+        "members": ["GROSS", "MAKE", "NET", "YIELD"]
+      },
+      {
+        "level": 2,
+        "group": "REMOTE CONTROL FUNCTIONS",
+        "members": ["HOME", "MUTE", "STOP", "VOLUME"]
+      },
+      {
+        "level": 3,
+        "group": "WORDS BEFORE \u201cDRUM\u201d",
+        "members": ["EAR", "KETTLE", "OIL", "SNARE"]
+      }
+    ]
+  },
+  {
+    "id": 575,
+    "date": "2025-01-06",
+    "answers": [
+      {
+        "level": 0,
+        "group": "BREATHE HARD",
+        "members": ["GASP", "HEAVE", "PANT", "PUFF"]
+      },
+      {
+        "level": 1,
+        "group": "CATCHALL",
+        "members": ["BLANKET", "BROAD", "GENERAL", "UMBRELLA"]
+      },
+      {
+        "level": 2,
+        "group": "METAPHORS FOR EASY THINGS",
+        "members": ["ABC", "BREEZE", "PICNIC", "PIE"]
+      },
+      {
+        "level": 3,
+        "group": "SYNONYMS FOR REAR END MINUS LAST LETTER",
+        "members": ["ARS", "BOOT", "BUT", "RUM"]
+      }
+    ]
+  },
+  {
+    "id": 576,
+    "date": "2025-01-07",
+    "answers": [
+      {
+        "level": 0,
+        "group": "VOCAL MUSIC",
+        "members": ["A CAPPELLA", "BARBERSHOP", "DOO-WOP", "MADRIGAL"]
+      },
+      {
+        "level": 1,
+        "group": "A HANDFUL OF",
+        "members": ["A FEW", "CERTAIN", "SOME", "VARIOUS"]
+      },
+      {
+        "level": 2,
+        "group": "BOOK SUBTITLES",
+        "members": ["A LIFE", "A NOVEL", "ESSAYS", "PART ONE"]
+      },
+      {
+        "level": 3,
+        "group": "___ IS ___ (IS ___)",
+        "members": ["A DEAL", "A ROSE", "ENOUGH", "LOVE"]
+      }
+    ]
   }
 ]
