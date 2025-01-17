@@ -4,7 +4,7 @@ import "./index.css";
 import App, { Game } from "./routes/App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import GamePage from "./routes/puzzles/puzzle/GamePage.tsx";
-import connections from "./connections.json";
+import connections from "../connections.json";
 import { GameProvider } from "./routes/puzzles/puzzle/GameContext.tsx";
 import PuzzlesPage from "./routes/puzzles/PuzzlesPage.tsx";
 import ErrorPage from "./components/ErrorPage/ErrorPage.tsx";

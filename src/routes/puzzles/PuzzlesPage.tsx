@@ -1,5 +1,5 @@
 import { Game } from "../App";
-import c from "../../connections.json";
+import c from "../../../connections.json";
 import { Link } from "react-router-dom";
 import styles from "./PuzzlesPage.module.css";
 import { GameState } from "./puzzle/GameContext";
@@ -19,6 +19,12 @@ const checkmarkIcon = (
     </g>
   </svg>
 );
+
+export const constructDateFromString = (str: string): Date => {
+  const [year, month, day] = str.split("-").map(Number);
+  const correctDate = new Date(year, month - 1, day);
+  return correctDate;
+};
 
 export default function PuzzlesPage() {
   const connections = c as Game[];
@@ -65,11 +71,14 @@ export default function PuzzlesPage() {
                   </Link>
                 </th>
                 <td className={styles.td}>
-                  {new Date(game.date).toLocaleDateString("en-us", {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  })}
+                  {constructDateFromString(game.date).toLocaleDateString(
+                    "en-us",
+                    {
+                      month: "short",
+                      year: "numeric",
+                      day: "2-digit",
+                    }
+                  )}
                 </td>
                 <td className={styles.td}>
                   {userHasCompletedGame(game) ? checkmarkIcon : ""}

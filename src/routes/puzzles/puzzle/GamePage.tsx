@@ -2,9 +2,8 @@ import { Link, useLoaderData } from "react-router-dom";
 import { Game } from "../../App";
 import styles from "./GamePage.module.css";
 import { Dispatch, MutableRefObject, useRef } from "react";
-import c from "../../../connections.json";
+import c from "../../../../connections.json";
 import "./GamePage.css";
-
 import {
   GameAction,
   GameActionType,
@@ -17,6 +16,7 @@ import { hasThreeCorrectWords } from "../../../utils";
 import CorrectAnswer from "../../../components/CorrectAnswer/CorrectAnswer";
 import Results from "../../../components/Results/Results";
 import Grid from "../../../components/Grid/Grid";
+import { constructDateFromString } from "../PuzzlesPage";
 
 export default function GamePage() {
   const game = useLoaderData() as Game;
@@ -27,11 +27,14 @@ export default function GamePage() {
 
   const dispatch = useGameDispatch() as Dispatch<GameAction>;
 
-  const dateText = new Date(game.date).toLocaleDateString("en-us", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
+  const dateText = constructDateFromString(game.date).toLocaleDateString(
+    "en-us",
+    {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    }
+  );
 
   const connections = c as Game[];
 
