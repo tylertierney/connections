@@ -1,5 +1,5 @@
 import connections from "./connections.json";
-import { Answer, Game } from "./src/routes/App";
+import { Answer, Game } from "./src/models/models";
 import fs from "fs";
 
 const convertNytGameToConnectionsGame = (

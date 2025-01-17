@@ -1,4 +1,4 @@
-import { Answer } from "../../routes/App";
+import { Answer } from "../../models/models";
 import CorrectAnswer from "../CorrectAnswer/CorrectAnswer";
 import styles from "../../routes/puzzles/puzzle/GamePage.module.css";
 import { Dispatch, MutableRefObject } from "react";

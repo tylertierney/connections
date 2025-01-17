@@ -58,18 +58,6 @@ const moonIcon = (
   </svg>
 );
 
-export interface Answer {
-  level: number;
-  group: string;
-  members: string[];
-}
-
-export interface Game {
-  id: number;
-  date: string;
-  answers: Answer[];
-}
-
 export default function App() {
   const [darkTheme, setDarkTheme] = useTheme();
 

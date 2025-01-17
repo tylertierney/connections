@@ -7,7 +7,7 @@ import {
   useEffect,
   useReducer,
 } from "react";
-import { Answer, Game } from "../../App";
+import { Answer, Game } from "../../../models/models";
 import { useLoaderData } from "react-router-dom";
 import { shuffleArray } from "../../../utils";
 

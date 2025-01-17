@@ -1,7 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
-import { Game } from "../../App";
+import { Game } from "../../../models/models";
 import styles from "./GamePage.module.css";
-import { Dispatch, MutableRefObject, useRef } from "react";
+import { Dispatch, MutableRefObject, useLayoutEffect, useRef } from "react";
 import c from "../../../../connections.json";
 import "./GamePage.css";
 import {
@@ -70,6 +70,10 @@ export default function GamePage() {
       }, 1000);
     }
   };
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className={styles.page}>

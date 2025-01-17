@@ -1,7 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App, { Game } from "./routes/App.tsx";
+import { Game } from "./models/models";
+import App from "./routes/App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import GamePage from "./routes/puzzles/puzzle/GamePage.tsx";
 import connections from "../connections.json";

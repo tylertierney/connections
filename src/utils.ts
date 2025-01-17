@@ -1,4 +1,4 @@
-import { Answer } from "./routes/App";
+import { Answer } from "./models/models";
 
 export function shuffleArray<T>(array: T[]): T[] {
   const arr = [...array];

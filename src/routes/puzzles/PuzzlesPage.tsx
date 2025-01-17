@@ -1,8 +1,8 @@
-import { Game } from "../App";
 import c from "../../../connections.json";
 import { Link } from "react-router-dom";
 import styles from "./PuzzlesPage.module.css";
 import { GameState } from "./puzzle/GameContext";
+import { Game } from "../../models/models";
 
 const checkmarkIcon = (
   <svg

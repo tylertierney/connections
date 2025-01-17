@@ -1,4 +1,4 @@
-import { Answer } from "../../routes/App";
+import { Answer } from "../../models/models";
 import styles from "./CorrectAnswer.module.css";
 
 interface CorrectAnswerProps {
