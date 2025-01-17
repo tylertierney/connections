@@ -4,7 +4,8 @@ import fs from "fs";
 
 const convertNytGameToConnectionsGame = (
   nytGame: NyTimesGame,
-  date: string
+  date: string,
+  id: number
 ): Game => {
   const answers: Answer[] = [];
 
@@ -17,7 +18,7 @@ const convertNytGameToConnectionsGame = (
     answers.push(answer);
   }
 
-  const game: Game = { id: nytGame.id, date, answers };
+  const game: Game = { id, date, answers };
   return game;
 };
 
@@ -57,7 +58,11 @@ const getNewGame = async () => {
     const response = await fetch(url);
     const data = (await response.json()) as NyTimesGame;
 
-    const game = convertNytGameToConnectionsGame(data, date);
+    const game = convertNytGameToConnectionsGame(
+      data,
+      date,
+      mostRecentGame.id + 1
+    );
     connections.push(game);
 
     fs.writeFileSync("connections.json", JSON.stringify(connections, null, 2));
