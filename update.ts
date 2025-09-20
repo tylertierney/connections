@@ -7,16 +7,13 @@ const convertNytGameToConnectionsGame = (
   date: string,
   id: number
 ): Game => {
-  const answers: Answer[] = []
-
-  for (const group in nytGame.groups) {
-    const answer: Answer = {
-      level: nytGame.groups[group].level,
-      group: group,
-      members: nytGame.groups[group].members,
-    }
-    answers.push(answer)
-  }
+  const answers: Answer[] = nytGame.categories.map(
+    ({ title, cards }, level) => ({
+      level,
+      group: title,
+      members: cards.map(({ content }) => content),
+    })
+  )
 
   const game: Game = { id, date, answers }
   return game
@@ -24,13 +21,15 @@ const convertNytGameToConnectionsGame = (
 
 interface NyTimesGame {
   id: number
-  groups: {
-    [key: string]: {
-      level: number
-      members: string[]
-    }
-  }
-  startingGroups: string[][]
+  print_date: string
+  editor: string
+  categories: Array<{
+    title: string
+    cards: Array<{
+      content: string
+      position: string
+    }>
+  }>
 }
 
 const getNewGame = async () => {
