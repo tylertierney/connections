@@ -38730,5 +38730,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 843,
+    "date": "2025-10-01",
+    "answers": [
+      {
+        "level": 0,
+        "group": "FAST-MOVING WATER",
+        "members": [
+          "CATARACT",
+          "CURRENT",
+          "RAPIDS",
+          "WHIRLPOOL"
+        ]
+      },
+      {
+        "level": 1,
+        "group": "CRITICIZE",
+        "members": [
+          "FLAME",
+          "KNOCK",
+          "SKEWER",
+          "SLAM"
+        ]
+      },
+      {
+        "level": 2,
+        "group": "ECHOEY PLACES",
+        "members": [
+          "CANYON",
+          "HALLWAY",
+          "TUNNEL",
+          "ZOOM CALL"
+        ]
+      },
+      {
+        "level": 3,
+        "group": "___ PRIZE",
+        "members": [
+          "BOOBY",
+          "DOOR",
+          "FIRST",
+          "JURY"
+        ]
+      }
+    ]
   }
 ]
