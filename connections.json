@@ -39006,5 +39006,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 849,
+    "date": "2025-10-07",
+    "answers": [
+      {
+        "level": 0,
+        "group": "GOSSIP",
+        "members": [
+          "BUZZ",
+          "DIRT",
+          "DISH",
+          "TALK"
+        ]
+      },
+      {
+        "level": 1,
+        "group": "SEEN AT A WEDDING",
+        "members": [
+          "ALTAR",
+          "BOUQUET",
+          "CAKE",
+          "RING"
+        ]
+      },
+      {
+        "level": 2,
+        "group": "TEAM",
+        "members": [
+          "BUNCH",
+          "CREW",
+          "GROUP",
+          "PACK"
+        ]
+      },
+      {
+        "level": 3,
+        "group": "MUSICALS PLUS STARTING LETTER",
+        "members": [
+          "BRENT",
+          "CHAIR",
+          "FANNIE",
+          "SCATS"
+        ]
+      }
+    ]
   }
 ]
