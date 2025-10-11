@@ -39190,5 +39190,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 853,
+    "date": "2025-10-11",
+    "answers": [
+      {
+        "level": 0,
+        "group": "EQUIPMENT",
+        "members": [
+          "GEAR",
+          "KIT",
+          "STUFF",
+          "TACKLE"
+        ]
+      },
+      {
+        "level": 1,
+        "group": "DRESS IN",
+        "members": [
+          "DON",
+          "PUT ON",
+          "SPORT",
+          "WEAR"
+        ]
+      },
+      {
+        "level": 2,
+        "group": "STREET SUFFIXES",
+        "members": [
+          "ALLEY",
+          "COURT",
+          "LANE",
+          "WAY"
+        ]
+      },
+      {
+        "level": 3,
+        "group": "NICKNAMES THAT HAVE OTHER MEANINGS",
+        "members": [
+          "BILL",
+          "BOB",
+          "PAT",
+          "TOM"
+        ]
+      }
+    ]
   }
 ]
