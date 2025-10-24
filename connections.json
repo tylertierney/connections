@@ -39788,5 +39788,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 866,
+    "date": "2025-10-24",
+    "answers": [
+      {
+        "level": 0,
+        "group": "BEST YEARS",
+        "members": [
+          "HEYDAY",
+          "PINNACLE",
+          "PRIME",
+          "ZENITH"
+        ]
+      },
+      {
+        "level": 1,
+        "group": "THINGS YOU CAN DO TO TEXT",
+        "members": [
+          "BOLD",
+          "HIGHLIGHT",
+          "STRIKETHROUGH",
+          "UNDERLINE"
+        ]
+      },
+      {
+        "level": 2,
+        "group": "THINGS KNOWN FOR BEING COLORFUL THINGS",
+        "members": [
+          "KALEIDOSCOPE",
+          "PEACOCK",
+          "RAINBOW",
+          "SUNSET"
+        ]
+      },
+      {
+        "level": 3,
+        "group": "ENDING IN ACCESSORIES",
+        "members": [
+          "BAYWATCH",
+          "COOTIE",
+          "HERRING",
+          "KINGPIN"
+        ]
+      }
+    ]
   }
 ]
