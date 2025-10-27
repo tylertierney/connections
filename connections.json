@@ -39926,5 +39926,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 869,
+    "date": "2025-10-27",
+    "answers": [
+      {
+        "level": 0,
+        "group": "EMANATE",
+        "members": [
+          "BRANCH",
+          "FAN",
+          "RADIATE",
+          "SPREAD"
+        ]
+      },
+      {
+        "level": 1,
+        "group": "IN THE SLIGHTEST",
+        "members": [
+          "JUST",
+          "MERELY",
+          "ONLY",
+          "SIMPLY"
+        ]
+      },
+      {
+        "level": 2,
+        "group": "COCKTAIL GARNISHES",
+        "members": [
+          "CHERRY",
+          "MINT",
+          "OLIVE",
+          "TWIST"
+        ]
+      },
+      {
+        "level": 3,
+        "group": "___ FOUR",
+        "members": [
+          "CONNECT",
+          "FAB",
+          "FANTASTIC",
+          "PETIT"
+        ]
+      }
+    ]
   }
 ]
