@@ -40018,5 +40018,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 871,
+    "date": "2025-10-29",
+    "answers": [
+      {
+        "level": 0,
+        "group": "FORTITUDE",
+        "members": [
+          "BACKBONE",
+          "COURAGE",
+          "HEART",
+          "SPIRIT"
+        ]
+      },
+      {
+        "level": 1,
+        "group": "CHANNEL",
+        "members": [
+          "MEDIUM",
+          "OUTLET",
+          "PLATFORM",
+          "VENUE"
+        ]
+      },
+      {
+        "level": 2,
+        "group": "WORDS STARTING WITH THE “SAY” SOUND",
+        "members": [
+          "SACRUM",
+          "SEITAN",
+          "SEYCHELLES",
+          "SÉANCE"
+        ]
+      },
+      {
+        "level": 3,
+        "group": "THINGS FEATURING LETTERS A THROUGH Z",
+        "members": [
+          "ABECEDARIUM",
+          "COMPUTER KEYBOARD",
+          "OUIJA BOARD",
+          "SCRABBLE"
+        ]
+      }
+    ]
   }
 ]
