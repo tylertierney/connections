@@ -40110,5 +40110,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 873,
+    "date": "2025-10-31",
+    "answers": [
+      {
+        "level": 0,
+        "group": "GOLDILOCKS",
+        "members": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "level": 1,
+        "group": "CINDERELLA",
+        "members": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "level": 2,
+        "group": "POPEYE",
+        "members": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "level": 3,
+        "group": "MS. PAC-MAN",
+        "members": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
   }
 ]
