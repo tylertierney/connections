@@ -40156,5 +40156,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 874,
+    "date": "2025-11-01",
+    "answers": [
+      {
+        "level": 0,
+        "group": "TAKE TO COURT",
+        "members": [
+          "CHARGE",
+          "FILE",
+          "INDICT",
+          "SUE"
+        ]
+      },
+      {
+        "level": 1,
+        "group": "BLACK",
+        "members": [
+          "INKY",
+          "JET",
+          "PITCH",
+          "RAVEN"
+        ]
+      },
+      {
+        "level": 2,
+        "group": "SECOND IN A FAMOUS REAL-LIFE DUO",
+        "members": [
+          "CHER",
+          "CLYDE",
+          "HARDY",
+          "TELLER"
+        ]
+      },
+      {
+        "level": 3,
+        "group": "RODENTS WHO ARE FIRST IN A CARTOON DUO",
+        "members": [
+          "CHIP",
+          "ITCHY",
+          "PINKY",
+          "ROCKY"
+        ]
+      }
+    ]
   }
 ]
