@@ -40432,5 +40432,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 880,
+    "date": "2025-11-07",
+    "answers": [
+      {
+        "level": 0,
+        "group": "TEXTILE PATTERNS",
+        "members": [
+          "ANIMAL PRINT",
+          "HERRINGBONE",
+          "HOUNDSTOOTH",
+          "POLKA DOT"
+        ]
+      },
+      {
+        "level": 1,
+        "group": "GREEN CONDIMENTS",
+        "members": [
+          "CHIMICHURRI",
+          "PESTO",
+          "RELISH",
+          "SALSA VERDE"
+        ]
+      },
+      {
+        "level": 2,
+        "group": "THINGS WITH HOLES IN THE MIDDLE",
+        "members": [
+          "BAGEL",
+          "HULA HOOP",
+          "INNER TUBE",
+          "WASHER"
+        ]
+      },
+      {
+        "level": 3,
+        "group": "THINGS THAT ARE PURPLE",
+        "members": [
+          "BARNEY THE DINOSAUR",
+          "EGGPLANT",
+          "PEOPLE EATER",
+          "SWING STATE"
+        ]
+      }
+    ]
   }
 ]
