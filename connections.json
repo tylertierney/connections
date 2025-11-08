@@ -40478,5 +40478,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 881,
+    "date": "2025-11-08",
+    "answers": [
+      {
+        "level": 0,
+        "group": "BLOCK, AS AN OPENING",
+        "members": [
+          "CLOSE",
+          "PLUG",
+          "SEAL",
+          "STOP"
+        ]
+      },
+      {
+        "level": 1,
+        "group": "PUT FORWARD, AS AN ANNOUNCEMENT",
+        "members": [
+          "DELIVER",
+          "GIVE",
+          "PRESENT",
+          "PRONOUNCE"
+        ]
+      },
+      {
+        "level": 2,
+        "group": "KINDS OF LANGUAGE",
+        "members": [
+          "BODY",
+          "PROGRAMMING",
+          "SIGN",
+          "SPOKEN"
+        ]
+      },
+      {
+        "level": 3,
+        "group": "WORDS AFTER \"I\"",
+        "members": [
+          "BEAM",
+          "CHING",
+          "ROBOT",
+          "SPY"
+        ]
+      }
+    ]
   }
 ]
