@@ -40616,5 +40616,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 884,
+    "date": "2025-11-11",
+    "answers": [
+      {
+        "level": 0,
+        "group": "MAKEUP",
+        "members": [
+          "BLUSH",
+          "FOUNDATION",
+          "HIGHLIGHTER",
+          "POWDER"
+        ]
+      },
+      {
+        "level": 1,
+        "group": "BREADTH",
+        "members": [
+          "EXTENT",
+          "RANGE",
+          "SCALE",
+          "SCOPE"
+        ]
+      },
+      {
+        "level": 2,
+        "group": "OBJECT USED FOR SUPPORT",
+        "members": [
+          "BASE",
+          "HOLDER",
+          "REST",
+          "STAND"
+        ]
+      },
+      {
+        "level": 3,
+        "group": "ICONS ON AN IPHONE",
+        "members": [
+          "COMPASS",
+          "ENVELOPE",
+          "MUSIC NOTES",
+          "SPEECH BUBBLE"
+        ]
+      }
+    ]
   }
 ]
