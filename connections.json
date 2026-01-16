@@ -43652,5 +43652,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 950,
+    "date": "2026-01-16",
+    "answers": [
+      {
+        "level": 0,
+        "group": "KINDS OF HATS",
+        "members": [
+          "DERBY",
+          "FEDORA",
+          "PANAMA",
+          "PORKPIE"
+        ]
+      },
+      {
+        "level": 1,
+        "group": "COMPONENTS OF A KID’S BEDTIME ROUTINE",
+        "members": [
+          "BATH",
+          "BRUSHING",
+          "PAJAMAS",
+          "STORY"
+        ]
+      },
+      {
+        "level": 2,
+        "group": "MUSICAL ACTS WITH \"A\" AS THE ONLY VOWEL",
+        "members": [
+          "ALABAMA",
+          "BANANARAMA",
+          "KANSAS",
+          "SANTANA"
+        ]
+      },
+      {
+        "level": 3,
+        "group": "GRAND ___",
+        "members": [
+          "BAHAMA",
+          "CANYON",
+          "SLAM",
+          "PIANO"
+        ]
+      }
+    ]
   }
 ]
