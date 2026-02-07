@@ -44664,5 +44664,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 972,
+    "date": "2026-02-07",
+    "answers": [
+      {
+        "level": 0,
+        "group": "PIPS ON A DIE",
+        "members": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "level": 1,
+        "group": "SYMBOLS USED IN ARITHMETIC",
+        "members": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "level": 2,
+        "group": "PUNCTUATION MARKS",
+        "members": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "level": 3,
+        "group": "LOWERCASE LETTERS",
+        "members": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
   }
 ]
