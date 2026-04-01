@@ -47102,5 +47102,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 1025,
+    "date": "2026-04-01",
+    "answers": [
+      {
+        "level": 0,
+        "group": "BEER BRANDS",
+        "members": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "level": 1,
+        "group": "ROCK BANDS",
+        "members": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "level": 2,
+        "group": "MOVIES",
+        "members": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "level": 3,
+        "group": "U.S. CITY NICKNAMES",
+        "members": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
   }
 ]
