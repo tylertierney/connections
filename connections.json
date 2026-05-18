@@ -49264,5 +49264,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 1072,
+    "date": "2026-05-18",
+    "answers": [
+      {
+        "level": 0,
+        "group": "HOMOPHONES",
+        "members": [
+          "PAIR",
+          "PARE",
+          "PEAR",
+          "PÈRE"
+        ]
+      },
+      {
+        "level": 1,
+        "group": "RUPTURE",
+        "members": [
+          "BLOW",
+          "CRACK",
+          "POP",
+          "SPLIT"
+        ]
+      },
+      {
+        "level": 2,
+        "group": "MLB PLAYER",
+        "members": [
+          "PADRE",
+          "RED",
+          "ROYAL",
+          "TWIN"
+        ]
+      },
+      {
+        "level": 3,
+        "group": "FRUIT ANAGRAMS",
+        "members": [
+          "CHEAP",
+          "EARP",
+          "LUMP",
+          "WIKI"
+        ]
+      }
+    ]
   }
 ]
